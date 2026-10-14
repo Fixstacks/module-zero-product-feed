@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+    Copyright © 2026 Roman Pasichnyk
+    SPDX-License-Identifier: OSL-3.0 OR AFL-3.0
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Rozetka and Prom.ua read the same YML; they name the old price differently. -->
+    <virtualType name="Zero\ProductFeed\Model\Format\Rozetka" type="Zero\ProductFeed\Model\Format\Yml">
+        <arguments>
+            <argument name="oldPriceTag" xsi:type="string">price_old</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Zero\ProductFeed\Model\Format\Prom" type="Zero\ProductFeed\Model\Format\Yml">
+        <arguments>
+            <argument name="oldPriceTag" xsi:type="string">oldprice</argument>
+        </arguments>
+    </virtualType>
+    <type name="Zero\ProductFeed\Model\Feed">
+        <arguments>
+            <argument name="formats" xsi:type="array">
+                <item name="rozetka" xsi:type="object">Zero\ProductFeed\Model\Format\Rozetka</item>
+                <item name="prom" xsi:type="object">Zero\ProductFeed\Model\Format\Prom</item>
+                <item name="hotline" xsi:type="object">Zero\ProductFeed\Model\Format\Hotline</item>
+                <item name="google" xsi:type="object">Zero\ProductFeed\Model\Format\Google</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+    Copyright © 2026 Roman Pasichnyk
+    SPDX-License-Identifier: OSL-3.0 OR AFL-3.0
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <zero_product_feed>
+            <rozetka>
+                <enabled>0</enabled>
+            </rozetka>
+            <prom>
+                <enabled>0</enabled>
+            </prom>
+            <hotline>
+                <enabled>0</enabled>
+            </hotline>
+            <google>
+                <enabled>0</enabled>
+            </google>
+        </zero_product_feed>
+    </default>
+</config>
