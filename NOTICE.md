@@ -1,4 +1,4 @@
-# fixstacks/module-zero-product-feed — licensing
+# zerofront/module-zero-product-feed — licensing
 
 Copyright © 2026 Roman Pasichnyk.
 
